@@ -771,3 +771,184 @@ body {
         margin: 12px 0;
     }
 }
+
+/* ===== SISTEMA DE AVATARES ===== */
+
+.player-avatar {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 12px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid #3b82f6;
+    border-radius: 16px;
+    background: #2563eb;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.player-avatar:hover {
+    transform: scale(1.07);
+    border-color: #67e8f9;
+}
+
+.player-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+/* Fundo escurecido */
+.avatar-modal[hidden] {
+    display: none !important;
+}
+
+.avatar-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(2, 12, 35, 0.82);
+    backdrop-filter: blur(6px);
+}
+
+/* Janela principal */
+.avatar-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 32px;
+    border: 3px solid #3b82f6;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #102a56, #071a39);
+    color: white;
+    text-align: center;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+}
+
+.avatar-modal-content h2 {
+    margin: 0 40px 12px;
+    font-size: 25px;
+    color: white;
+}
+
+.avatar-modal-content > p {
+    margin-bottom: 26px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.avatar-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+/* Grade de personagens */
+.avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.avatar-option {
+    overflow: hidden;
+    padding: 0 0 12px;
+    border: 3px solid #315aa0;
+    border-radius: 18px;
+    background: #163568;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.avatar-option:hover {
+    transform: translateY(-4px);
+    border-color: #60a5fa;
+}
+
+.avatar-option.selected {
+    border-color: #67e8f9;
+    box-shadow: 0 0 0 2px rgba(103, 232, 249, 0.25);
+}
+
+.avatar-option img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+.avatar-option span {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Botões */
+.avatar-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.avatar-cancel,
+.avatar-confirm {
+    padding: 13px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.avatar-cancel {
+    border: 2px solid #315aa0;
+    background: transparent;
+    color: white;
+}
+
+.avatar-confirm {
+    border: 2px solid #38bdf8;
+    background: #2563eb;
+    color: white;
+}
+
+.avatar-confirm:hover {
+    background: #1d4ed8;
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .avatar-modal-content {
+        padding: 25px 15px;
+    }
+
+    .avatar-modal-content h2 {
+        font-size: 19px;
+    }
+
+    .avatar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .avatar-actions {
+        flex-direction: column;
+    }
+}
