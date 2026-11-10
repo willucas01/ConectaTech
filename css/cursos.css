@@ -1,0 +1,773 @@
+/* MELHORIAS VISUAIS - CONECTATECH */
+
+/* Cabeçalho escuro */
+.courses-page {
+    background: linear-gradient(
+        180deg,
+        #e0f2fe 0%,
+        #f8fafc 75%
+    );
+}
+
+/* Hero mais compacto */
+.courses-hero {
+    padding: 45px 0;
+    background: linear-gradient(
+        120deg,
+        #102a56,
+        #2563eb
+    );
+}
+
+/* Layout principal */
+.courses-layout {
+    gap: 22px;
+    padding-top: 28px;
+}
+
+/* Painel lateral */
+.courses-sidebar {
+    border: 2px solid #2563eb;
+    box-shadow: 0 10px 30px rgba(16,42,86,.15);
+}
+
+/* Cards mais compactos */
+.courses-grid {
+    gap: 18px;
+}
+
+.world-card {
+    border: 2px solid #bfdbfe;
+    border-radius: 15px;
+}
+
+.world-banner {
+    min-height: 185px;
+}
+
+/* Elementos retrô */
+.world-number {
+    font-family: "Press Start 2P", monospace;
+    font-size: 8px;
+}
+
+.world-stars {
+    font-family: "Press Start 2P", monospace;
+}
+
+/* Barra de progresso */
+.world-progress-track {
+    height: 12px;
+    border: 2px solid #cbd5e1;
+}
+
+/* Botões */
+.world-button {
+    box-shadow: 0 4px 0 #1e40af;
+}
+
+.world-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #1e40af;
+}
+
+@media (max-width: 600px) {
+    .courses-layout {
+        padding-top: 20px;
+    }
+}
+
+.courses-page {
+    background: #f8fafc;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    color: #102a56;
+}
+
+.courses-hero {
+    background: linear-gradient(120deg, #102a56, #2563eb);
+    color: white;
+    padding: 65px 0;
+}
+
+.courses-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #bfdbfe;
+    margin-bottom: 16px;
+}
+
+.courses-hero h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.courses-hero h1 span {
+    color: #93c5fd;
+}
+
+.courses-hero p {
+    max-width: 550px;
+    color: #dbeafe;
+    line-height: 1.8;
+}
+
+.courses-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 30px;
+    padding-top: 45px;
+    padding-bottom: 75px;
+}
+
+/* PAINEL LATERAL */
+
+.courses-sidebar {
+    background: #102a56;
+    color: white;
+    border-radius: 18px;
+    padding: 25px 18px;
+    align-self: start;
+}
+
+.sidebar-player {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #35517c;
+}
+
+.player-avatar {
+    width: 75px;
+    height: 75px;
+    background: #2563eb;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    margin: 0 auto 15px;
+}
+
+.sidebar-player h2 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.sidebar-player p,
+.sidebar-player small {
+    color: #dbeafe;
+    font-size: 13px;
+}
+
+.sidebar-progress,
+.world-progress-track {
+    height: 9px;
+    background: #dbeafe;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sidebar-progress {
+    background: #36527c;
+    margin: 15px 0 8px;
+}
+
+#course-xp-bar {
+    height: 100%;
+    width: 0%;
+    background: #38bdf8;
+    transition: width .4s ease;
+}
+
+.sidebar-menu {
+    display: grid;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.sidebar-menu a {
+    color: #dbeafe;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.selected {
+    color: white;
+    background: #2563eb;
+}
+
+.sidebar-tip {
+    margin-top: 30px;
+    background: #1d4179;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 12px;
+}
+
+.sidebar-tip p {
+    color: #dbeafe;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* CABEÇALHO E FILTROS */
+
+.courses-content {
+    min-width: 0;
+}
+
+.courses-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.courses-heading h2 {
+    font-size: 29px;
+    margin: 10px 0;
+}
+
+.courses-heading p {
+    color: #64748b;
+}
+
+.courses-count {
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.courses-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #102a56;
+    padding: 11px 18px;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* CARDS DOS MUNDOS */
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.world-card {
+    background: white;
+    border: 1px solid #dbe5f1;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(16,42,86,.06);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.world-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(16,42,86,.12);
+}
+
+.world-banner {
+    min-height: 155px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.html-world {
+    background: linear-gradient(135deg, #fed7aa, #fb923c);
+}
+
+.css-world {
+    background: linear-gradient(135deg, #bfdbfe, #60a5fa);
+}
+
+.js-world {
+    background: linear-gradient(135deg, #fef08a, #facc15);
+}
+
+.python-world {
+    background: linear-gradient(135deg, #bbf7d0, #4ade80);
+}
+
+.world-icon {
+    font-size: 65px;
+    filter: drop-shadow(0 8px 3px rgba(0,0,0,.12));
+}
+
+.world-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #102a56;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.world-stars {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    color: white;
+    font-size: 20px;
+}
+
+.world-body {
+    padding: 23px;
+}
+
+.world-difficulty {
+    font-size: 10px;
+    font-weight: 800;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+.world-body h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.world-body p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.7;
+    min-height: 45px;
+}
+
+.world-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 18px 0;
+}
+
+.world-progress-fill {
+    height: 100%;
+    background: #22c55e;
+}
+
+.world-body small {
+    display: block;
+    margin: 10px 0 16px;
+    color: #64748b;
+}
+
+.world-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    border: 0;
+    border-radius: 9px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.world-button:hover {
+    background: #1d4ed8;
+}
+
+.locked-button {
+    background: #94a3b8;
+}
+
+.locked-button:hover {
+    background: #64748b;
+}
+
+.world-card.locked .world-banner {
+    filter: saturate(.65);
+}
+
+.courses-message {
+    margin-top: 22px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.courses-footer {
+    background: #102a56;
+    color: #dbeafe;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .courses-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .courses-hero {
+        padding: 45px 0;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .courses-heading h2 {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .world-card,
+    #course-xp-bar {
+        transition: none;
+    }
+}
+
+body {
+
+/* MELHORIAS VISUAIS - CONECTATECH */
+
+/* Cabeçalho escuro */
+.courses-page {
+    background: linear-gradient(
+        180deg,
+        #e0f2fe 0%,
+        #f8fafc 75%
+    );
+}
+
+/* Hero mais compacto */
+.courses-hero {
+    padding: 45px 0;
+    background: linear-gradient(
+        120deg,
+        #102a56,
+        #2563eb
+    );
+}
+
+/* Layout principal */
+.courses-layout {
+    gap: 22px;
+    padding-top: 28px;
+}
+
+/* Painel lateral */
+.courses-sidebar {
+    border: 2px solid #2563eb;
+    box-shadow: 0 10px 30px rgba(16,42,86,.15);
+}
+
+/* Cards mais compactos */
+.courses-grid {
+    gap: 18px;
+}
+
+.world-card {
+    border: 2px solid #bfdbfe;
+    border-radius: 15px;
+}
+
+.world-banner {
+    min-height: 185px;
+}
+
+/* Elementos retrô */
+.world-number {
+    font-family: "Press Start 2P", monospace;
+    font-size: 8px;
+}
+
+.world-stars {
+    font-family: "Press Start 2P", monospace;
+}
+
+/* Barra de progresso */
+.world-progress-track {
+    height: 12px;
+    border: 2px solid #cbd5e1;
+}
+
+/* Botões */
+.world-button {
+    box-shadow: 0 4px 0 #1e40af;
+}
+
+.world-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #1e40af;
+}
+
+@media (max-width: 600px) {
+    .courses-layout {
+        padding-top: 20px;
+    }
+}
+
+}
+.world-banner {
+    height: 185px;
+    overflow: hidden;
+}
+
+.world-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.world-number,
+.world-stars {
+    z-index: 2;
+}
+.language-logo {
+    position: absolute;
+    z-index: 3;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 5px 4px rgba(0,0,0,0.35));
+}
+
+/* =========================================
+   CONECTATECH - LAYOUT RESPONSIVO DOS CURSOS
+   ========================================= */
+
+/* Aproveitar melhor a largura da tela */
+.courses-layout.container {
+    width: 96%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+}
+
+/* Evitar que o conteúdo ultrapasse a área */
+.courses-content {
+    min-width: 0;
+}
+
+/* Quatro mundos lado a lado */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* Cards mais compactos */
+.world-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+}
+
+/* Cenários pixel art */
+.world-banner {
+    height: 145px;
+    min-height: 145px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagem de fundo */
+.world-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+/* Símbolos das linguagens */
+.language-logo {
+    position: absolute;
+    z-index: 3;
+    width: 58px;
+    height: 58px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+/* Conteúdo dos cards */
+.world-body {
+    padding: 16px 13px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.world-body h3 {
+    font-size: 19px;
+    margin: 9px 0;
+}
+
+.world-body p {
+    font-size: 12px;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+/* Manter os botões alinhados */
+.world-button {
+    margin-top: auto;
+    padding: 12px 8px;
+    font-size: 11px;
+}
+
+/* Etiqueta de mundo */
+.world-number {
+    font-size: 7px;
+    padding: 8px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+/* Notebooks e telas intermediárias */
+@media (max-width: 1250px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .world-banner {
+        height: 175px;
+        min-height: 175px;
+    }
+
+    .world-body p {
+        min-height: 45px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .courses-layout.container {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-sidebar {
+        width: 100%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .courses-layout.container {
+        width: 92%;
+        grid-template-columns: 1fr;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .world-banner {
+        height: 185px;
+        min-height: 185px;
+    }
+
+    .world-body {
+        padding: 20px;
+    }
+
+    .world-body p {
+        min-height: 0;
+    }
+
+    .language-logo {
+        width: 75px;
+        height: 75px;
+    }
+}
+/* Ajustes finais da página Cursos */
+
+@media (min-width: 1251px) {
+    .courses-hero {
+        padding: 30px 0;
+    }
+
+    .courses-layout {
+        padding-top: 20px;
+    }
+
+    .world-banner {
+        height: 135px;
+        min-height: 135px;
+    }
+
+    .world-body {
+        padding: 13px 12px;
+    }
+
+    .world-body p {
+        min-height: 55px;
+        font-size: 11px;
+    }
+
+    .world-meta {
+        margin: 12px 0;
+    }
+}

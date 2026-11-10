@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ConectaTech: aprenda programação, complete desafios e evolua no mundo da tecnologia.">
+
+    <title>ConectaTech | Aprenda. Jogue. Evolua.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/home.js" defer></script>
+</head>
+
+<body>
+
+    
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                Conecta<span>Tech</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="progresso.html">Meu progresso</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+
+            <a href="interesses.html" class="btn btn-primary nav-button">
+                Começar agora <span>→</span>
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        <span class="status-dot"></span>
+                        SUA JORNADA COMEÇA AQUI
+                    </span>
+
+                    <h1>
+                        Seu próximo nível
+                        começa com
+                        <span>conhecimento.</span>
+                    </h1>
+
+                    <p>
+                        Aprenda programação, enfrente desafios e
+                        desbloqueie novas habilidades. Transforme
+                        seu aprendizado em uma grande aventura.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="cursos.html" class="btn btn-primary">
+                            Explorar cursos →
+                        </a>
+
+                        <a href="interesses.html" class="btn btn-outline">
+                            Descobrir meu caminho
+                        </a>
+                    </div>
+
+                    <div class="hero-info">
+                        <span>✓ Gratuito</span>
+                        <span>✓ Aprenda no seu ritmo</span>
+                        <span>✓ Evolua jogando</span>
+                    </div>
+
+                </div>
+
+                
+                <div class="hero-art">
+
+                    <div class="art-glow"></div>
+
+                    <div class="floating-card xp-card">
+                        <span>⚡</span>
+                        <div>
+                            <strong>+50 XP</strong>
+                            <small>Continue evoluindo!</small>
+                        </div>
+                    </div>
+
+                    <div class="pixel-world">
+
+                        <div class="pixel-sun"></div>
+
+                        <div class="pixel-cloud cloud-one"></div>
+                        <div class="pixel-cloud cloud-two"></div>
+
+                        <div class="pixel-character">
+                            <div class="character-hair"></div>
+                            <div cladss="character-face"></div>
+                            <div class="character-body"></div>
+                            <div class="character-leg"></div>
+                        </div>
+
+                        <div class="pixel-platform">
+                            <span>■</span>
+                            <span>■</span>
+                            <span>■</span>
+                            <span>■</span>
+                            <span>■</span>
+                            <span>■</span>
+                        </div>
+
+                        <div class="pixel-coin coin-one">◆</div>
+                        <div class="pixel-coin coin-two">◆</div>
+
+                        <div class="pixel-block">?</div>
+
+                    </div>
+
+                    <div class="floating-card level-card">
+                        <span class="level-icon">🏆</span>
+                        <div>
+                            <strong>LEVEL UP!</strong>
+                            <small>Uma nova conquista!</small>
+                        </div>
+                    </div>
+
+                    <div class="art-caption">
+                        <span class="pixel-label">PLAYER 001</span>
+                        <span>PRESS START TO LEARN</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        
+        <section class="player-section container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">SUA EVOLUÇÃO</span>
+                    <h2>Continue sua jornada</h2>
+                </div>
+
+                <a href="progresso.html" class="text-link">
+                    Ver progresso →
+                </a>
+            </div>
+
+            <div class="player-card">
+
+                <div class="player-profile">
+
+                    <div class="player-avatar">👨‍💻</div>
+
+                    <div>
+                        <span class="player-label">SEU PERFIL</span>
+                        <h3>Jogador iniciante</h3>
+                        <span class="player-level">NÍVEL 01 · EXPLORADOR</span>
+                    </div>
+
+                </div>
+
+                <div class="player-xp">
+
+                    <div class="xp-heading">
+                        <span>Experiência (XP)</span>
+                        <strong id="xp-text">0 / 100 XP</strong>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-fill" id="xp-bar"></div>
+                    </div>
+
+                    <small id="xp-message">
+                        Complete desafios para alcançar o próximo nível!
+                    </small>
+
+                </div>
+
+                <div class="player-reward">
+                    <span>🎯</span>
+                    <strong id="player-level">Nível 1</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+        <section class="mission-section container">
+
+            <div class="mission-card">
+
+                <div class="mission-content">
+
+                    <span class="mission-label">
+                        ⚡ DESAFIO DE APRENDIZAGEM
+                    </span>
+
+                    <h2>Sua primeira missão</h2>
+
+                    <p>
+                        Descubra como funciona o HTML e dê seus
+                        primeiros passos na construção de páginas web.
+                    </p>
+
+                    <div class="mission-reward">
+                        <span>🏅 Recompensa:</span>
+                        <strong>+20 XP</strong>
+                    </div>
+
+                    <a href="exercicios.html" class="btn btn-light"
+                        id="mission-button">
+                        Aceitar desafio →
+                    </a>
+
+                </div>
+
+                <div class="mission-icon">
+                    <div class="code-window">
+                        <span class="window-dots">● ● ●</span>
+                        <div class="code-lines">
+                            <span>&lt;html&gt;</span>
+                            <span>&nbsp; &lt;body&gt;</span>
+                            <span>&nbsp;&nbsp; Hello World!</span>
+                            <span>&nbsp; &lt;/body&gt;</span>
+                            <span>&lt;/html&gt;</span>
+                        </div>
+                    </div>
+                    <span class="mission-spark">✦</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+        <section class="courses-section container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">ESCOLHA SUA AVENTURA</span>
+                    <h2>Explore as fases</h2>
+                    <p>Escolha uma trilha e comece a desenvolver suas habilidades.</p>
+                </div>
+
+                <a href="cursos.html" class="text-link">
+                    Ver todos os cursos →
+                </a>
+            </div>
+
+            <div class="courses-grid">
+
+                <article class="course-card">
+
+                    <div class="course-visual html-visual">
+                        <span class="course-icon">5</span>
+                        <span class="course-symbol">HTML</span>
+                        <span class="course-phase">FASE 01</span>
+                    </div>
+
+                    <div class="course-info">
+                        <span class="course-category">DESENVOLVIMENTO WEB</span>
+                        <h3>HTML para iniciantes</h3>
+                        <p>Aprenda a estruturar suas primeiras páginas web.</p>
+
+                        <div class="course-footer">
+                            <span>🟢 Iniciante</span>
+                            <a href="detalhes-curso.html">Jogar fase →</a>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="course-card">
+
+                    <div class="course-visual css-visual">
+                        <span class="course-icon">✦</span>
+                        <span class="course-symbol">CSS</span>
+                        <span class="course-phase">FASE 02</span>
+                    </div>
+
+                    <div class="course-info">
+                        <span class="course-category">DESENVOLVIMENTO WEB</span>
+                        <h3>CSS e estilização</h3>
+                        <p>Transforme estruturas em interfaces incríveis.</p>
+
+                        <div class="course-footer">
+                            <span>🟢 Iniciante</span>
+                            <a href="detalhes-curso.html">Jogar fase →</a>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="course-card">
+
+                    <div class="course-visual js-visual">
+                        <span class="course-icon">JS</span>
+                        <span class="course-symbol">JavaScript</span>
+                        <span class="course-phase">FASE 03</span>
+                    </div>
+
+                    <div class="course-info">
+                        <span class="course-category">PROGRAMAÇÃO</span>
+                        <h3>JavaScript básico</h3>
+                        <p>Aprenda lógica e dê vida às suas aplicações.</p>
+
+                        <div class="course-footer">
+                            <span>🟡 Intermediário</span>
+                            <a href="detalhes-curso.html">Jogar fase →</a>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        
+        <section class="achievements-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-tag">SUAS VITÓRIAS</span>
+                        <h2>Conquistas desbloqueáveis</h2>
+                        <p>Cada pequeno passo merece ser comemorado.</p>
+                    </div>
+                </div>
+
+                <div class="achievements-grid">
+
+                    <div class="achievement-card">
+                        <span class="achievement-icon">🏆</span>
+                        <h3>Primeira vitória</h3>
+                        <p>Complete seu primeiro exercício.</p>
+                        <span class="achievement-status">BLOQUEADA</span>
+                    </div>
+
+                    <div class="achievement-card">
+                        <span class="achievement-icon">💻</span>
+                        <h3>Primeiro código</h3>
+                        <p>Escreva sua primeira linha de código.</p>
+                        <span class="achievement-status">BLOQUEADA</span>
+                    </div>
+
+                    <div class="achievement-card">
+                        <span class="achievement-icon">🔥</span>
+                        <h3>Em chamas</h3>
+                        <p>Estude durante três dias seguidos.</p>
+                        <span class="achievement-status">BLOQUEADA</span>
+                    </div>
+
+                    <div class="achievement-card">
+                        <span class="achievement-icon">👑</span>
+                        <h3>Subindo de nível</h3>
+                        <p>Alcance o nível cinco.</p>
+                        <span class="achievement-status">BLOQUEADA</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+        <section class="final-cta container">
+
+            <div>
+                <span class="section-tag">SUA PRÓXIMA FASE ESPERA</span>
+                <h2>Pronto para começar sua aventura?</h2>
+                <p>O primeiro passo é sempre o mais importante.</p>
+            </div>
+
+            <a href="cursos.html" class="btn btn-primary">
+                PRESS START →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="index.html" class="logo footer-logo">
+                &lt;/&gt; Conecta<span>Tech</span>
+            </a>
+
+            <p>
+                Conectando pessoas ao conhecimento e às oportunidades
+                da tecnologia.
+            </p>
+
+            <span>© 2026 ConectaTech. Todos os direitos reservados.</span>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
