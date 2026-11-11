@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha do Curso | ConectaTech</title>
+  <link rel="stylesheet" href="css/detalhes-curso.css">
+  <script src="js/detalhes-curso.js" defer></script>
+</head>
+<body>
+  <header class="ct-header">
+    <a href="index.html" class="ct-logo">&lt;/&gt; Conecta<span>Tech</span></a>
+    <nav class="ct-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="cursos.html" class="active">Cursos</a>
+      <a href="biblioteca.html">Biblioteca</a>
+      <a href="progresso.html">Meu progresso</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <a href="cursos.html" class="ct-start">Explorar cursos →</a>
+  </header>
+
+  <div class="ct-layout">
+    <aside class="ct-sidebar">
+      <div class="ct-profile">
+        <img id="ct-avatar"
+             src="assets/images/avatares/aventureiro.png"
+             alt="Avatar do jogador">
+        <div class="ct-profile-info">
+          <h2 id="ct-level">Nível 1</h2>
+          <p>Aprendiz de Código</p>
+          <div class="ct-xp-track">
+            <div id="ct-xp-fill"></div>
+          </div>
+          <small id="ct-xp-text">0 / 100 XP</small>
+        </div>
+      </div>
+
+      <nav class="ct-side-links" aria-label="Menu do jogador">
+        <a href="cursos.html" class="active">🎮 Meus cursos</a>
+        <a href="progresso.html">🏆 Conquistas</a>
+        <a href="#panel-exercicios" id="ct-missions">⚡ Missões</a>
+        <a href="biblioteca.html">📚 Biblioteca</a>
+      </nav>
+
+      <div class="ct-tip">
+        <h3>💡 Dica do jogador</h3>
+        <p>Complete os desafios para ganhar XP e desbloquear novas fases!</p>
+      </div>
+    </aside>
+
+    <main class="ct-main">
+      <section class="ct-hero">
+        <img id="ct-course-logo"
+             class="ct-course-logo"
+             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+             alt="Ícone do curso">
+
+        <div class="ct-hero-info">
+          <div class="ct-title-line">
+            <h1 id="ct-course-title">HTML5</h1>
+            <span id="ct-difficulty" class="ct-difficulty">Iniciante</span>
+          </div>
+          <p id="ct-course-description">
+            Aprenda programação e avance pelas fases.
+          </p>
+          <div id="ct-course-stats" class="ct-course-stats"></div>
+        </div>
+
+        <img id="ct-world-image"
+             class="ct-world-image"
+             src="assets/images/castelo-banner.png"
+             alt="Castelo pixel art">
+      </section>
+
+      <div class="ct-tabs" role="tablist" aria-label="Seções do curso">
+        <button class="ct-tab active" type="button" data-tab="trilha">
+          🗺️ Trilha do Curso
+        </button>
+        <button class="ct-tab" type="button" data-tab="conteudo">
+          📚 Conteúdo
+        </button>
+        <button class="ct-tab" type="button" data-tab="exercicios">
+          🎮 Exercícios
+        </button>
+        <button class="ct-tab" type="button" data-tab="projetos">
+          💻 Projetos
+        </button>
+      </div>
+
+      <section id="panel-trilha" class="ct-panel active">
+        <div class="ct-content-grid">
+          <article class="ct-map-card">
+            <div class="ct-section-heading">
+              <h2>🗺️ Mapa de Fases</h2>
+              <p>Explore o mundo, complete os desafios e conquiste XP!</p>
+            </div>
+
+            <div class="ct-map-scene">
+              <img id="ct-map-image"
+                   class="ct-map-image"
+                   src="assets/images/mapa-fases-html.png"
+                   alt="Mapa pixel art com castelo, cachoeiras e trilha">
+
+              <div id="ct-map-stages" class="ct-map-stages"></div>
+            </div>
+
+            <p class="ct-map-hint">
+              Selecione uma fase desbloqueada para começar.
+            </p>
+          </article>
+
+          <aside class="ct-progress-column">
+            <section class="ct-progress-card">
+              <h2>📊 Seu progresso</h2>
+              <p id="ct-progress">0 de 4 módulos concluídos</p>
+              <div class="ct-progress-track">
+                <div id="ct-progress-fill"></div>
+              </div>
+              <strong id="ct-progress-percent">0%</strong>
+            </section>
+
+            <section class="ct-modules-card">
+              <h2>📚 Módulos do curso</h2>
+              <div id="ct-trail-list" class="ct-module-list"></div>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section id="panel-conteudo" class="ct-panel">
+        <article class="ct-box">
+          <h2>📚 Conteúdo do Curso</h2>
+          <p>Conheça os assuntos que serão estudados em cada módulo.</p>
+          <div id="ct-content-list" class="ct-module-list"></div>
+        </article>
+      </section>
+
+      <section id="panel-exercicios" class="ct-panel">
+        <article class="ct-box">
+          <h2 id="ct-exercise-heading">🎮 Exercícios do Curso</h2>
+          <p>
+            Cada módulo possui 10 perguntas. Acerte pelo menos
+            7 para passar, ganhar XP e desbloquear a próxima fase.
+          </p>
+          <div id="ct-challenges" class="ct-challenges"></div>
+        </article>
+      </section>
+
+      <section id="panel-projetos" class="ct-panel">
+        <article class="ct-box">
+          <h2>💻 Projetos</h2>
+          <p>Coloque em prática o que você aprendeu.</p>
+          <div class="ct-module">
+            <h3>🏆 Projeto Final</h3>
+            <p>Conclua os módulos e desenvolva seu projeto.</p>
+          </div>
+        </article>
+      </section>
+
+      <footer class="ct-footer">
+        <a href="cursos.html" class="ct-back">← Voltar aos cursos</a>
+        <a id="ct-continue" class="ct-continue"
+           href="exercicios.html?curso=html&modulo=1">
+          Começar módulo 1 →
+        </a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
